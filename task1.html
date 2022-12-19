@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body.dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleTheme" />
+    <h1>This is heading</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque optio
+      officia culpa aperiam fuga quod fugiat dignissimos autem dolorem a ut
+      quidem quo, eos repellendus exercitationem! Blanditiis laboriosam
+      doloremque cupiditate.
+    </p>
+    <script>
+      let check = document.querySelector("#toggleTheme");
+      check.addEventListener("change", function () {
+        if (check.checked == true) {
+          document.documentElement.setAttribute(
+            "style",
+            "background-color: black;"
+          );
+          document
+            .getElementsByTagName("body")[0]
+            .setAttribute("style", "color: white;");
+        } else {
+          document.documentElement.setAttribute(
+            "style",
+            "background-color: white;"
+          );
+          document
+            .getElementsByTagName("body")
+            .setAttribute("style", "color: black;");
+        }
+      });
+    </script>
+  </body>
+</html>
